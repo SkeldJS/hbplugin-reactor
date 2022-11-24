@@ -1,7 +1,7 @@
 {
   "name": "hbplugin-reactor",
   "packageManager": "yarn@4.0.0-rc.23",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "My cool Hindenburg plugin",
   "keywords": [
     "hindenburg",
@@ -50,11 +50,11 @@
     }
   },
   "dependencies": {
-    "@skeldjs/reactor": "^2.15.48",
+    "@skeldjs/reactor": "^2.15.49",
     "minimatch": "^5.1.0"
   },
   "resolutions": {
-    "@skeldjs/protocol": "^2.15.48",
-    "@skeldjs/util": "^2.15.48"
+    "@skeldjs/protocol": "^2.15.49",
+    "@skeldjs/util": "^2.15.49"
   }
 }

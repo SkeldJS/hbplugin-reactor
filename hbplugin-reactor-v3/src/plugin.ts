@@ -166,7 +166,6 @@ export class ReactorPlugin extends WorkerPlugin {
     @MessageHandler(ReactorSceneChangeMessage, { override: true, attachTo: MessageHandlerAttach.Room })
     async onReactorSceneChangeMessage(message: ReactorSceneChangeMessage, ctx: PacketContext, _originalHandlers: MessageHandlerCallback<ReactorSceneChangeMessage>[]) {
         if (!this.config.serverAsHostSyncer || !this.config.enabled) {
-            console.log(message.sceneChange);
             for (const handler of _originalHandlers) {
                 const sceneChangeHandler = handler as unknown as MessageHandlerCallback<SceneChangeMessage>;
                 await sceneChangeHandler(message.sceneChange, ctx);
