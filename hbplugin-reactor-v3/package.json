@@ -1,0 +1,60 @@
+{
+  "name": "hbplugin-reactor",
+  "packageManager": "yarn@4.0.0-rc.23",
+  "version": "3.0.0",
+  "description": "My cool Hindenburg plugin",
+  "keywords": [
+    "hindenburg",
+    "plugin",
+    "among us"
+  ],
+  "license": "GPL-3.0-only",
+  "author": {
+    "name": "Edward Smale",
+    "email": "essmale2005@gmail.com"
+  },
+  "files": [
+    "dist",
+    "config.schema.json"
+  ],
+  "main": "./dist/index.js",
+  "types": "./index.ts",
+  "publishConfig": {
+    "types": "./dist/index.d.ts"
+  },
+  "scripts": {
+    "publish": "yarn npm publish --access public",
+    "build": "tsc --project ./",
+    "watch": "tsc --watch --project ./",
+    "prepack": "yarn build"
+  },
+  "engines": {
+    "node": ">=14",
+    "hindenburg": "1.1.*"
+  },
+  "devDependencies": {
+    "@skeldjs/hindenburg": "^1.1.26",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0-dev.20221124"
+  },
+  "plugin": {
+    "loadOrder": "none",
+    "defaultConfig": {
+      "enabled": true,
+      "serverAsHostSyncer": false,
+      "blockClientSideOnly": true,
+      "mods": {},
+      "allowExtraMods": true,
+      "requireHostMods": true,
+      "allowNormalClients": true
+    }
+  },
+  "dependencies": {
+    "@skeldjs/reactor": "^2.15.48",
+    "minimatch": "^5.1.0"
+  },
+  "resolutions": {
+    "@skeldjs/protocol": "^2.15.48",
+    "@skeldjs/util": "^2.15.48"
+  }
+}
